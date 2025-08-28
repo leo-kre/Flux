@@ -6,6 +6,7 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
+    "platforms": ["ios"],
     "experiments": {
       "tsconfigPaths": true
     },
@@ -91,13 +92,6 @@
         "com.apple.developer.background-processing": true,
         "com.apple.developer.background-fetch": true
       }
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.anonymous.myexpoapp"
     }
   }
 }
