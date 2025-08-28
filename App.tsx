@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View } from 'react-native';
 import { useColorScheme } from 'nativewind';
 import { NavigationContainer } from '@react-navigation/native';
@@ -16,9 +16,13 @@ export type RootStackParamList = {
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function AppNavigator() {
+  const [isUserSetUp, setIsUserSetUp] = useState(false);
+
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Welcome">
+      <Stack.Navigator
+        screenOptions={{ headerShown: false }}
+        initialRouteName={isUserSetUp ? 'Home' : 'Welcome'}>
         <Stack.Screen name="Welcome" component={Welcome} />
         <Stack.Screen name="ConnectAppleHealth" component={ConnectAppleHealth} />
         <Stack.Screen name="Home" component={Home} />

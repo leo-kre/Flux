@@ -44,9 +44,26 @@
               "BloodPressureSystolic",
               "BloodPressureDiastolic"
             ],
-            "write": [
-              "Workout" // nur wenn wirklich benötigt
-            ]
+            "write": ["Workout"]
+          }
+        }
+      ],
+      [
+        "react-native-background-fetch",
+        {
+          "minimumFetchInterval": 15,
+          "stopOnTerminate": false,
+          "startOnBoot": true,
+          "enableHeadless": true,
+          "requiredNetworkType": "ANY",
+          "scheduleTask": {
+            "taskId": "com.deinpaket.health.processing",
+            "delay": 60000,
+            "periodic": true,
+            "stopOnTerminate": false,
+            "startOnBoot": true,
+            "requiresCharging": false,
+            "requiredNetworkType": "ANY"
           }
         }
       ]
@@ -65,8 +82,14 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.anonymous.myexpoapp",
       "infoPlist": {
-        "NSHealthShareUsageDescription": "Die App liest Gesundheitsdaten zur Analyse von Lernfenstern.",
-        "NSHealthUpdateUsageDescription": "Die App kann Trainingsdaten schreiben (optional)."
+        "NSHealthShareUsageDescription": "Die App liest Gesundheitsdaten zur Analyse deiner Energie- und Lernfenster.",
+        "NSHealthUpdateUsageDescription": "Die App kann Trainingsdaten schreiben (optional).",
+        "BGTaskSchedulerPermittedIdentifiers": ["com.deinpaket.health.processing"]
+      },
+      "entitlements": {
+        "com.apple.developer.healthkit": true,
+        "com.apple.developer.background-processing": true,
+        "com.apple.developer.background-fetch": true
       }
     },
     "android": {
