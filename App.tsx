@@ -1,13 +1,25 @@
-import { ScreenContent } from 'components/ScreenContent';
-import { StatusBar } from 'expo-status-bar';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Welcome from './pages/Welcome';
+import ConnectAppleHealth from './pages/ConnectAppleHealth';
+import Home from './pages/Home';
 
-import './global.css';
+export type RootStackParamList = {
+  Welcome: undefined;
+  ConnectAppleHealth: undefined;
+  Home: undefined;
+};
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (
-    <>
-      <ScreenContent title="Home" path="App.tsx"></ScreenContent>
-      <StatusBar style="auto" />
-    </>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Welcome">
+        <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen name="ConnectAppleHealth" component={ConnectAppleHealth} />
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
