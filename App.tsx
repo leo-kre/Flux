@@ -1,3 +1,6 @@
+import React from 'react';
+import { View } from 'react-native';
+import { useColorScheme } from 'nativewind';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Welcome from './pages/Welcome';
@@ -12,7 +15,7 @@ export type RootStackParamList = {
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
-export default function App() {
+function AppNavigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Welcome">
@@ -21,5 +24,14 @@ export default function App() {
         <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
+  );
+}
+
+export default function App() {
+  const { colorScheme } = useColorScheme(); // 'light' | 'dark' (aus System, oder später toggeln)
+  return (
+    <View className={`${colorScheme} flex-1 bg-white dark:bg-black`}>
+      <AppNavigator />
+    </View>
   );
 }

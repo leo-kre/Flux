@@ -26,44 +26,48 @@ export default function ConnectAppleHealth({ navigation }: Props) {
   };
 
   return (
-    <View className="h-full w-full flex-1 items-center justify-around bg-black">
+    <View className="h-full w-full flex-1 items-center justify-around bg-white dark:bg-black">
       <View className="flex h-4/6 w-11/12 justify-center">
-        <Text className="text-6xl font-semibold text-white">Find your</Text>
+        <Text className="text-6xl font-semibold text-black dark:text-white">Find your</Text>
 
         <View className="w-full flex-row">
           <GradientText
             text="rhythm"
             textClassName="text-6xl font-semibold"
             gradientColor="purple"></GradientText>
-          <Text className="text-6xl font-semibold text-white">.</Text>
+          <Text className="text-6xl font-semibold text-black dark:text-white">.</Text>
         </View>
 
-        <Text className="text-6xl font-semibold text-white">Study when</Text>
-        <Text className="text-6xl font-semibold text-white">you're</Text>
+        <Text className="text-6xl font-semibold text-black dark:text-white">Study when</Text>
+        <Text className="text-6xl font-semibold text-black dark:text-white">you're</Text>
 
         <View className="w-full flex-row">
           <GradientText
             text="energized"
             textClassName="text-6xl font-semibold"
             gradientColor="green"></GradientText>
-          <Text className="text-6xl font-semibold text-white">,</Text>
+          <Text className="text-6xl font-semibold text-black dark:text-white">,</Text>
         </View>
 
-        <Text className="text-6xl font-semibold text-white">rest when</Text>
-        <Text className="text-6xl font-semibold text-white">you need it.</Text>
+        <Text className="text-6xl font-semibold text-black dark:text-white">rest when</Text>
+        <Text className="text-6xl font-semibold text-black dark:text-white">you need it.</Text>
       </View>
 
       <View className="h-1/6 w-full items-center">
         <Pressable
-          className="w-11/12 rounded-3xl border border-white p-2"
+          className="w-11/12 rounded-3xl border border-black p-2 dark:border-white"
           onPress={() => onPressConnect()}
           accessibilityRole="button">
           <View className="flex w-full flex-row items-center gap-2">
             <Image source={Apple_Health_Icon} className="aspect-square w-1/5"></Image>
             <View className="mr-4 w-4/5">
               <View className="">
-                <Text className="text-center text-2xl font-bold text-white">Connect Apple</Text>
-                <Text className="text-center text-2xl font-bold text-white">Health</Text>
+                <Text className="text-center text-2xl font-bold text-black dark:text-white">
+                  Connect Apple
+                </Text>
+                <Text className="text-center text-2xl font-bold text-black dark:text-white">
+                  Health
+                </Text>
               </View>
             </View>
           </View>
