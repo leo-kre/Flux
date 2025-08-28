@@ -6,9 +6,7 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "platforms": [
-      "ios"
-    ],
+    "platforms": ["ios"],
     "experiments": {
       "tsconfigPaths": true
     },
@@ -42,9 +40,7 @@
               "BloodPressureSystolic",
               "BloodPressureDiastolic"
             ],
-            "write": [
-              "Workout"
-            ]
+            "write": ["Workout"]
           }
         }
       ],
@@ -76,19 +72,16 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
+      "newArchEnabled": false,
       "userInterfaceStyle": "automatic",
       "supportsTablet": true,
       "bundleIdentifier": "com.leokre.flux",
       "infoPlist": {
         "NSHealthShareUsageDescription": "Die App liest Gesundheitsdaten zur Analyse deiner Energie- und Lernfenster.",
         "NSHealthUpdateUsageDescription": "Die App kann Trainingsdaten schreiben (optional).",
-        "BGTaskSchedulerPermittedIdentifiers": [
-          "com.deinpaket.health.processing"
-        ]
+        "BGTaskSchedulerPermittedIdentifiers": ["com.deinpaket.health.processing"]
       },
       "entitlements": {
         "com.apple.developer.healthkit": true,

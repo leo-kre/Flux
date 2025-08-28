@@ -27,7 +27,7 @@ export default function ConnectAppleHealth({ navigation }: Props) {
 
   return (
     <View className="h-full w-full flex-1 items-center justify-around bg-b dark:bg-db">
-      <View className="flex h-4/6 w-11/12 justify-center">
+      <View className="ml-4 flex h-4/6 w-11/12 justify-center">
         <Text className="text-6xl font-semibold text-f dark:text-df">Find your</Text>
 
         <View className="w-full flex-row">
@@ -55,7 +55,7 @@ export default function ConnectAppleHealth({ navigation }: Props) {
 
       <View className="h-1/6 w-full items-center">
         <Pressable
-          className="w-11/12 rounded-3xl border border-f p-2 dark:border-df"
+          className="w-[88%] rounded-3xl border border-f p-2 dark:border-df"
           onPress={() => onPressConnect()}
           accessibilityRole="button">
           <View className="flex w-full flex-row items-center gap-2">
