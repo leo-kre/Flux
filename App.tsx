@@ -34,7 +34,7 @@ function AppNavigator() {
 export default function App() {
   const { colorScheme } = useColorScheme(); // 'light' | 'dark' (aus System, oder später toggeln)
   return (
-    <View className={`${colorScheme} flex-1 bg-white dark:bg-black`}>
+    <View className={`${colorScheme} flex-1 bg-white text-black dark:bg-black dark:text-white`}>
       <AppNavigator />
     </View>
   );

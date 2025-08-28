@@ -6,7 +6,9 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "platforms": ["ios"],
+    "platforms": [
+      "ios"
+    ],
     "experiments": {
       "tsconfigPaths": true
     },
@@ -20,32 +22,29 @@
               "DistanceWalkingRunning",
               "DistanceCycling",
               "FlightsClimbed",
-
               "HeartRate",
               "RestingHeartRate",
               "WalkingHeartRateAverage",
               "HeartRateVariabilitySDNN",
               "VO2Max",
-
               "ActiveEnergyBurned",
               "BasalEnergyBurned",
-
               "SleepAnalysis",
               "MindfulSession",
-
               "BodyMass",
               "Height",
               "BodyMassIndex",
               "BodyFatPercentage",
               "LeanBodyMass",
-
               "BodyTemperature",
               "RespiratoryRate",
               "OxygenSaturation",
               "BloodPressureSystolic",
               "BloodPressureDiastolic"
             ],
-            "write": ["Workout"]
+            "write": [
+              "Workout"
+            ]
           }
         }
       ],
@@ -77,21 +76,28 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "userInterfaceStyle": "automatic",
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.myexpoapp",
+      "bundleIdentifier": "com.leokre.flux",
       "infoPlist": {
         "NSHealthShareUsageDescription": "Die App liest Gesundheitsdaten zur Analyse deiner Energie- und Lernfenster.",
         "NSHealthUpdateUsageDescription": "Die App kann Trainingsdaten schreiben (optional).",
-        "BGTaskSchedulerPermittedIdentifiers": ["com.deinpaket.health.processing"]
+        "BGTaskSchedulerPermittedIdentifiers": [
+          "com.deinpaket.health.processing"
+        ]
       },
       "entitlements": {
         "com.apple.developer.healthkit": true,
         "com.apple.developer.background-processing": true,
         "com.apple.developer.background-fetch": true
       }
+    },
+    "android": {
+      "package": "com.leokre.flux"
     }
   }
 }

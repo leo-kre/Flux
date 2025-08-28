@@ -5,7 +5,16 @@ module.exports = {
   darkMode: 'class',
   presets: [require('nativewind/preset')],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        f: '#000000',
+        sf: '#28282b8',
+        b: '#FFFFFF',
+        df: '#ffffff',
+        dsf: '#5C5C5C',
+        db: '#000000',
+      },
+    },
   },
   plugins: [],
 };
