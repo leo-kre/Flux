@@ -1,5 +1,4 @@
 import AppleHealthKit, { HealthKitPermissions } from 'react-native-health';
-console.log('HK keys:', Object.keys(AppleHealthKit));
 
 const P = AppleHealthKit.Constants.Permissions;
 
