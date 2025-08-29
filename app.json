@@ -76,19 +76,17 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "deploymentTarget": "15.1",
+      "newArchEnabled": false,
       "userInterfaceStyle": "automatic",
       "supportsTablet": true,
       "bundleIdentifier": "com.leokre.flux.bgfetch",
       "infoPlist": {
         "NSHealthShareUsageDescription": "Die App liest Gesundheitsdaten zur Analyse deiner Energie- und Lernfenster.",
         "NSHealthUpdateUsageDescription": "Die App kann Trainingsdaten schreiben (optional).",
-        "BGTaskSchedulerPermittedIdentifiers": ["com.deinpaket.health.processing"],
-        "UIBackgroundModes": ["fetch"]
+        "BGTaskSchedulerPermittedIdentifiers": ["com.deinpaket.health.processing"]
       },
       "entitlements": {
-        "com.apple.developer.healthkit": true,
-        "com.apple.developer.background-processing": true,
-        "com.apple.developer.background-fetch": true
+        "com.apple.developer.healthkit": true
       }
     },
     "android": {

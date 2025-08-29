@@ -29,10 +29,7 @@ const permissions: HealthKitPermissions = {
       P.BloodPressureSystolic,
       P.BloodPressureDiastolic,
     ],
-    write: [
-      /* P.Workout */
-      // nur drin lassen, wenn wirklich benötigt
-    ],
+    write: [P.Workout],
   },
 };
 
