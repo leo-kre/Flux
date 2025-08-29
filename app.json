@@ -11,6 +11,7 @@
       "tsconfigPaths": true
     },
     "plugins": [
+      ["expo-build-properties", { "ios": { "deploymentTarget": "15.1" } }],
       [
         "react-native-health",
         {
@@ -74,14 +75,15 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "newArchEnabled": false,
+      "deploymentTarget": "15.1",
       "userInterfaceStyle": "automatic",
       "supportsTablet": true,
-      "bundleIdentifier": "com.leokre.flux",
+      "bundleIdentifier": "com.leokre.flux.bgfetch",
       "infoPlist": {
         "NSHealthShareUsageDescription": "Die App liest Gesundheitsdaten zur Analyse deiner Energie- und Lernfenster.",
         "NSHealthUpdateUsageDescription": "Die App kann Trainingsdaten schreiben (optional).",
-        "BGTaskSchedulerPermittedIdentifiers": ["com.deinpaket.health.processing"]
+        "BGTaskSchedulerPermittedIdentifiers": ["com.deinpaket.health.processing"],
+        "UIBackgroundModes": ["fetch"]
       },
       "entitlements": {
         "com.apple.developer.healthkit": true,
