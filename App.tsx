@@ -6,7 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Welcome from './pages/Welcome';
 import ConnectAppleHealth from './pages/ConnectAppleHealth';
 import Home from './pages/Home';
-import { loadStorageValue } from 'components/StorageManager';
+import { loadStorageValue } from 'utils/StorageManager';
 
 export type RootStackParamList = {
   Welcome: undefined;

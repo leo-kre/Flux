@@ -8,8 +8,8 @@ import Apple_Health_Icon from '../assets/Apple_Health_Icon.png';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'ConnectAppleHealth'>;
 
-import RequestAppleHealthPermissions from 'components/RequestAppleHealthPermissions';
-import { saveStorageValue } from 'components/StorageManager';
+import RequestAppleHealthPermissions from 'utils/RequestAppleHealthPermissions';
+import { saveStorageValue } from 'utils/StorageManager';
 
 export default function ConnectAppleHealth({ navigation }: Props) {
   const onPressConnect = async () => {
