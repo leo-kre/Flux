@@ -9,6 +9,7 @@ import Apple_Health_Icon from '../assets/Apple_Health_Icon.png';
 type Props = NativeStackScreenProps<RootStackParamList, 'ConnectAppleHealth'>;
 
 import RequestAppleHealthPermissions from 'components/RequestAppleHealthPermissions';
+import { saveStorageValue } from 'components/StorageManager';
 
 export default function ConnectAppleHealth({ navigation }: Props) {
   const onPressConnect = async () => {
@@ -20,6 +21,7 @@ export default function ConnectAppleHealth({ navigation }: Props) {
     try {
       await RequestAppleHealthPermissions();
       navigation.reset({ index: 0, routes: [{ name: 'Home' }] });
+      saveStorageValue('isAppleHealthConnected', true);
     } catch (e: any) {
       Alert.alert('HealthKit error', String(e?.message ?? e));
     }

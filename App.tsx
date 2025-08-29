@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Welcome from './pages/Welcome';
 import ConnectAppleHealth from './pages/ConnectAppleHealth';
 import Home from './pages/Home';
+import { loadStorageValue } from 'components/StorageManager';
 
 export type RootStackParamList = {
   Welcome: undefined;
@@ -16,7 +17,7 @@ export type RootStackParamList = {
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function AppNavigator() {
-  const [isUserSetUp, setIsUserSetUp] = useState(false);
+  const isUserSetUp = loadStorageValue('isAppleHealthConnected', false);
 
   return (
     <NavigationContainer>
